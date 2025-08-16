@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>聊天室</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 登入畫面 -->
+  <div id="login-screen" class="screen">
+    <h2>歡迎回來</h2>
+    <input id="login-username" placeholder="使用者名稱或郵箱">
+    <input id="login-password" type="password" placeholder="密碼">
+    <button onclick="login()">登入</button>
+    <p>沒有帳號嗎？<a href="#" onclick="showRegister()">註冊一個吧</a></p>
+  </div>
+
+  <!-- 註冊畫面 -->
+  <div id="register-screen" class="screen hidden">
+    <h2>建立新帳號</h2>
+    <input id="reg-name" placeholder="名稱">
+    <input id="reg-age" type="number" placeholder="年齡">
+    <input id="reg-email" type="email" placeholder="郵箱">
+    <input id="reg-password" type="password" placeholder="密碼">
+    <button onclick="register()">註冊</button>
+  </div>
+
+  <!-- 主頁 (聊天室列表) -->
+  <div id="main-screen" class="screen hidden">
+    <h2>聊天室</h2>
+    <div id="chat-list">載入中...</div>
+    <input id="invite-code" placeholder="輸入邀請碼">
+    <button onclick="joinChat()">加入聊天室</button>
+  </div>
+
+  <!-- 聊天室畫面 -->
+  <div id="chat-room-screen" class="screen hidden">
+    <!-- 上方工具列 -->
+    <div class="chat-header">
+      <button id="menu-btn">☰</button>
+      <h3 id="chat-room-title">聊天室</h3>
+    </div>
+
+    <!-- 訊息區 -->
+    <div id="chat-messages" class="chat-messages">
+      <!-- 訊息會由 JS 動態生成 -->
+    </div>
+
+    <!-- 輸入框 -->
+    <div class="chat-input">
+      <input id="chat-input-box" type="text" placeholder="輸入訊息...">
+      <button onclick="sendMessage()">送出</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
