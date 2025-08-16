@@ -1,4 +1,4 @@
-const API_BASE = "https://chat-backend.YOUR_ACCOUNT.workers.dev"; // 修改成 Worker URL
+const API_BASE = "https://chat-app-server.kai1020622.workers.dev"; // 修改成 Worker URL
 let ws = null;
 let currentRoom = null;
 const messages = [];
